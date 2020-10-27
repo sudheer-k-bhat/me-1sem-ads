@@ -13,8 +13,8 @@ void test_program_seats(){
 void test_register_new_student(){
     Student student1 = register_new_student("Sudheer", BDA, "sudheer@gmail.com");
     Student student2 = register_new_student("Rakshi", BDA, "rakshi@gmail.com");
-    // to_string(student1);
-    // to_string(student2);
+    to_string(student1);
+    to_string(student2);
 }
 
 int main(){
