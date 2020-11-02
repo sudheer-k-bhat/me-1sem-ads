@@ -6,9 +6,10 @@
 
 typedef enum {
     ALLOTED = 10,
-    WAITING_LIST,
-    WITHDRAWN,
-    NEW
+    WAITING_LIST = 20,
+    WITHDRAWN = 30,
+    NEW = 40,
+    REJECTED = 50
 }SEAT_STATUS;
 
 typedef enum {
@@ -28,6 +29,8 @@ typedef struct {
     PROGRAM_ID program_id;
     char email[EMAIL_LEN];
     SEAT_STATUS status;
+    int8_t entrance_test_rank;
+    float ug_grade;
 } Student;
 
 typedef struct {
@@ -51,19 +54,15 @@ typedef struct {
 } Error;
 
 typedef struct {
-    Student student;
+    Student* student;
     Error error;
 } StudentDTO;
 
-void set_program_seats(int8_t bda, int8_t ml, int8_t es);
-int8_t get_total_seats_for_branch(PROGRAM_ID);
 void to_string(Student student);
-void to_string_program(Program program);
-void to_string_student_dto(StudentDTO model);
-//WIP
-StudentDTO register_new_student(char name[], PROGRAM_ID, char email[]);
+void student_to_string(Student* student);
+void to_string_program(Program* program);
+void to_string_student_dto(StudentDTO* model);
 //TODO
 int32_t get_admission_status(Student s1);
-int8_t get_filled_seats(Program pg, char branch[]);
 
 #endif
