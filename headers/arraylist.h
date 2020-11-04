@@ -1,4 +1,8 @@
-//Credits: https://codereview.stackexchange.com/questions/64423/implementing-an-arraylist
+/**
+ * A general purpose arraylist (similar to list in C++)
+ * 
+ * @author Credits: https://codereview.stackexchange.com/questions/64423/implementing-an-arraylist
+ **/
 #include <stdint.h>
 
 #ifndef ARRAY_LIST_H_INCLUDED

@@ -1,3 +1,9 @@
+/**
+ * Console app to test the functionality
+ * 
+ * @author sudheer-k-bhat
+ * @see admission_manager.h for available APIs.
+ **/
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>
@@ -7,6 +13,7 @@
 #include "log.h"
 #include "arraylist.h"
 
+//---------Test suite-----START---//
 void test_program_seats(){
     log_info("[testcase]: test_program_seats()");
     set_program_seats(40, 50, 60);
@@ -83,6 +90,7 @@ void test_allot_waitlist_seats(){
     assert(get_filled_seats(BDA) == 6);
     assert(get_filled_seats(ML) == 1);
 }
+//---------Test suite-----END---//
 
 int main(){
     test_register_new_student();

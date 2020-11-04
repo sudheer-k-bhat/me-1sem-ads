@@ -1,4 +1,8 @@
-//Credits: https://stackoverflow.com/a/23446001
+/**
+ * A logger with 3 logging levels.
+ * 
+ * @author https://stackoverflow.com/a/23446001
+ **/
 #include <stdarg.h>
 
 #ifndef LOG_H 

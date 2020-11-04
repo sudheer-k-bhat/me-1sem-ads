@@ -1,3 +1,9 @@
+/**
+ * Data structures used.
+ * 
+ * @author sudheer-k-bhat
+ * @see admission_manager.h for how the models are used in the API.
+ **/
 #include <stdint.h>
 #include "app_constants.h"
 

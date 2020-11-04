@@ -1,3 +1,8 @@
+/**
+ * Application constants.
+ * 
+ * @author sudheer-k-bhat
+ **/
 #ifndef APP_CONSTANTS_H_INCLUDED
 #define APP_CONSTANTS_H_INCLUDED
 
