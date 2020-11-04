@@ -1,13 +1,12 @@
 #include <stdint.h>
 #include "app_constants.h"
 
-#ifndef STUDENT_H_INCLUDED
-#define STUDENT_H_INCLUDED
+#ifndef MODELS_H_INCLUDED
+#define MODELS_H_INCLUDED
 
 typedef enum {
     ALLOTED = 10,
     WAITING_LIST = 20,
-    WITHDRAWN = 30,
     NEW = 40,
     REJECTED = 50
 }SEAT_STATUS;
@@ -31,6 +30,7 @@ typedef struct {
     SEAT_STATUS status;
     int8_t entrance_test_rank;
     float ug_grade;
+    PROGRAM_ID additional_program_ids[2];
 } Student;
 
 typedef struct {
@@ -38,7 +38,6 @@ typedef struct {
     int8_t total_seats;
     int8_t filled_seats;
     char code[PROGRAM_CODE_LEN];
-    //TODO change to 32
     int8_t reg_num_sequence;
 } Program;
 
@@ -58,11 +57,6 @@ typedef struct {
     Error error;
 } StudentDTO;
 
-void to_string(Student student);
 void student_to_string(Student* student);
-void to_string_program(Program* program);
-void to_string_student_dto(StudentDTO* model);
-//TODO
-int32_t get_admission_status(Student s1);
 
 #endif

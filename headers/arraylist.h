@@ -1,4 +1,8 @@
+//Credits: https://codereview.stackexchange.com/questions/64423/implementing-an-arraylist
 #include <stdint.h>
+
+#ifndef ARRAY_LIST_H_INCLUDED
+#define ARRAY_LIST_H_INCLUDED
 
 typedef struct {
     size_t size;
@@ -23,3 +27,5 @@ void arraylist_clear(ArrayList *list);
 void arraylist_deallocate(ArrayList *list);
 
 int arraylist_getindex(ArrayList *list, void *elem);
+
+#endif
